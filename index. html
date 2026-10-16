@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Messaging Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 30px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+    }
+    h1 { color: #128c7e; }
+    textarea, input, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+    }
+    textarea { height: 120px; }
+    button {
+      background: #128c7e;
+      color: white;
+      border: 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .note { color: #555; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WhatsApp Messaging Dashboard</h1>
+    <p>Prepare your message campaign.</p>
+
+    <label>Campaign name</label>
+    <input id="campaign" placeholder="Enter campaign name">
+
+    <label>Message</label>
+    <textarea id="message" placeholder="Write your message"></textarea>
+
+    <button onclick="saveCampaign()">Save Campaign</button>
+    <p id="status"></p>
+    <p class="note">
+      Demo dashboard only. No WhatsApp messages are sent.
+      Connect an official WhatsApp Business API to enable messaging.
+    </p>
+  </div>
+
+  <script>
+    function saveCampaign() {
+      const campaign = document.getElementById("campaign").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!campaign || !message) {
+        document.getElementById("status").textContent =
+          "Please enter a campaign name and message.";
+        return;
+      }
+
+      document.getElementById("status").textContent =
+        "Campaign details prepared successfully.";
+    }
+  </script>
+</body>
+</html>
