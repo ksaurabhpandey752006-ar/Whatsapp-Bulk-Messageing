@@ -1,0 +1,9 @@
+# Whatsapp Bulk Messaging Tool 
+A Project for Whatsapp Messaging automation.
+## Feature
+-Contact Management
+-Message Campaign Management
+-Whatsapp Business API integration
+-Delivery status tracking
+## Requirement
+Use the official Whatsapp Business Platform API and message opted-in contacts only.
